@@ -1,0 +1,28 @@
+
+FROM ghcr.io/omnetpp/omnetpp:u22.04-6.0 AS base
+
+# first stage - build inet
+FROM base as builder
+WORKDIR /root
+RUN apt update && apt install -y unzip 
+RUN wget https://github.com/aarizaq/inetmanet-4.x/archive/refs/heads/master.zip \
+         --progress=dot:mega && unzip master.zip && rm master.zip
+RUN cp ./inetmanet-4.x-master/.nedexclusions.default ./inetmanet-4.x-master/.nedexclusions
+WORKDIR /root/omnetpp 
+COPY .oppfeaturestate ../inetmanet-4.x-master/.oppfeaturestate
+COPY .nedexclusions ../inetmanet-4.x-master/.nedexclusions
+
+RUN . ./setenv && cd ../inetmanet-4.x-master && . ./setenv && \
+    make makefiles && \
+    make -j $(nproc) MODE=release && \
+    rm -rf out
+
+# second stage - copy only the final binaries (to get rid of the 'out' folder and reduce the image size)
+FROM base
+RUN mkdir -p /root/inetmanet-4.x-master
+WORKDIR /root/inetmanet-4.x-master
+COPY --from=builder /root/inetmanet-4.x-master/ .
+RUN echo 'PS1="inetmanet-4.x-master:\w\$ "' >> /root/.bashrc && \
+    echo '[ -f "$HOME/omnetpp/setenv" ] && source "$HOME/omnetpp/setenv" -f' >> /root/.bashrc && \
+    echo '[ -f "$HOME/inetmanet-4.x-master/setenv" ] && source "$HOME/inetmanet-4.x-master/setenv" -f' >> /root/.bashrc && \
+    touch /root/.hushlogin
