@@ -2,7 +2,7 @@
 // This program is property of its copyright holder. All rights reserved.
 //
 
-package inet.examples.manetrouting.inetmanet;
+package inet.examples.manetrouting.testnetwork;
 
 import inet.common.scenario.ScenarioManager;
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
@@ -18,6 +18,7 @@ network TestNetwork
 {
     parameters:
         int numHosts;
+        int numRelays;
         @display("bgb=650,650");
     submodules:
         radioMedium: Ieee80211ScalarRadioMedium {
@@ -33,10 +34,15 @@ network TestNetwork
             parameters:
                 @display("p=100,300;is=s");
         }
+        relay[numRelays]: AdhocHost {
+            parameters:
+                @display("i=device/pocketpc_s;r=,,#707070");
 
+        }
         host[numHosts]: AdhocHost {
             parameters:
                 @display("i=device/pocketpc_s;r=,,#707070");
+
         }
     connections allowunconnected:
 }
