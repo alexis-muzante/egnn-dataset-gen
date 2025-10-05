@@ -1,0 +1,91 @@
+[Inspector-0]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-1]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-2]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-3]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-4]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-5]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-6]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-7]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-8]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[Inspector-9]
+classname=omnetpp::cTextFigure
+fullscreen=false
+geom=@Rect(0 145 400 300)
+id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
+object=TestNetwork.canvas.rootFigure.routing tables.routing entry.panel.label
+type=1
+
+[RunModeProfiles]
+fast-max-animation-speed=nan
+fast-max-playback-speed=1e+06
+fast-min-animation-speed=nan
+fast-min-playback-speed=1
+fast-playback-speed=181.97008586099827
+run-max-animation-speed=nan
+run-max-playback-speed=100
+run-min-animation-speed=nan
+run-min-playback-speed=0.01
+run-playback-speed=1
