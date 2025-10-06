@@ -12,7 +12,7 @@ mkdir -p topology
 # Generate network positions
 echo "Generating network positions for seed ${SEED} with Betweeness Threshold ${BTW_TH}..."
 
-python3 utils/generate_network_positions.py ${numTX} ${numRX} ${numRXTX} ${numRelay} 600 ${SEED} 1000 ${BTW_TH} ${repeat} topology/positions-${SEED}.ini
+python3 utils/generate_network_positions.py ${numTX} ${numRX} ${numRXTX} ${numRelay} ${area} ${SEED} 1000 ${BTW_TH} ${repeat} topology/positions-${SEED}.ini
 
 echo 'Simulando'
 echo "Seed:${SEED}"
