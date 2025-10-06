@@ -206,5 +206,7 @@ results/
 results_good/
 tq_plots
 dataset/
+topology/
+
 inetmanet-docker/inetmanet-4.x/
 inetmanet-docker/batman-dataset/core

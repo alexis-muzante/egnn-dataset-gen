@@ -4,8 +4,8 @@ import networkx as nx
 import numpy as np
 
 if __name__ == "__main__":
-    if len(sys.argv) != 10:
-        print("Usage: python generate_network_positions.py <num_txhost> <num_rxhost> <num_rxtxhost> <num_relays> <max_area> <seed> <max_reps> <betweenness_threshold> <num_repeats>")
+    if len(sys.argv) != 11:
+        print("Usage: python generate_network_positions.py <num_txhost> <num_rxhost> <num_rxtxhost> <num_relays> <max_area> <seed> <max_reps> <betweenness_threshold> <num_repeats> <outputfile>")
         sys.exit(1)
 
     num_txhost = int(sys.argv[1])
@@ -17,6 +17,7 @@ if __name__ == "__main__":
     max_reps = int(sys.argv[7])
     betweenness_threshold = float(sys.argv[8])
     num_repeats = int(sys.argv[9])
+    outputfile = str(sys.argv[10])
 
     random.seed(seed)
 
@@ -90,7 +91,7 @@ if __name__ == "__main__":
         graphs.append(G)
 
     # Generate output file
-    with open(f"positions-{seed}.ini", "w") as f:
+    with open(outputfile, "w") as f:
         for node_id in graphs[0].nodes():
             node_type = graphs[0].nodes[node_id]["type"]
             if node_type == "txhost":
