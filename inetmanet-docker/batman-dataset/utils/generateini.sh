@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# OMNeT++ Configuration Environment Variable Generator
-# This script calculates and exports variables for the configuration file
-set -a          # auto-export everything that is sourced
-. ./simulation.conf   # (dot-space) source the file
-set +a          # stop the auto-export
-
 # Input parameters (modify these values as needed)
 numRX=${numRX:-5}        # Number of RX hosts
 numTX=${numTX:-5}        # Number of TX hosts  
